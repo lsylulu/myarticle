@@ -67,22 +67,20 @@ public enum Week {
     }
 
     public static void main(String[] args) {
-//        //遍历Week枚举类
-//        for (Week day : Week.values()) {
-//            System.out.println("name:" + day.name() +
-//                    ",desc:" + day.getDesc());
-//        }
-//        //通过values()获取枚举数组
-//        Week[] weeks = Week.values();
-//        //java.lang.IllegalArgumentException
-//        System.out.println(Week.valueOf("MONDAY"));
-//        //返回对应的name属性
-//        System.out.println(Week.FRIDAY.toString());
-//        //返回4，根据我们定义的次序，从0开始。如果在定义时调换FRIDAY
-//        //的次序，返回的数字也会对应的变化
-//        System.out.println(Week.FRIDAY.ordinal());
-
-
+        //遍历Week枚举类
+        for (Week day : Week.values()) {
+            System.out.println("name:" + day.name() +
+                    ",desc:" + day.getDesc());
+        }
+        //通过values()获取枚举数组
+        Week[] weeks = Week.values();
+        //java.lang.IllegalArgumentException
+        System.out.println(Week.valueOf("MONDAY"));
+        //返回对应的name属性
+        System.out.println(Week.FRIDAY.toString());
+        //返回4，根据我们定义的次序，从0开始。如果在定义时调换FRIDAY
+        //的次序，返回的数字也会对应的变化
+        System.out.println(Week.FRIDAY.ordinal());
 
 
     }
