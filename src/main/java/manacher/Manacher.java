@@ -87,7 +87,7 @@ public class Manacher {
         }
         char[] charArr = manacherString(str);
         //回文半径数组
-        int[] pArr = new int[charArr.length];
+        int[] curArr = new int[charArr.length];
         //当前回文中心的索引
         int C = -1;
         //当前回文右边界
@@ -96,24 +96,24 @@ public class Manacher {
         for (int i = 0; i != charArr.length; i++) {
             //i'的回文到r的距离，哪个小哪个就是回文的区域
             //2*index-i是当前索引关于回文中心的对称点
-            pArr[i] = R > i ? Math.min(pArr[2 * C - i], R - i) : 1;
+            curArr[i] = R > i ? Math.min(curArr[2 * C - i], R - i) : 1;
             //要检验的区域没越界，且当前索引对应回文的左边边界也没有越界
-            while (i + pArr[i] < charArr.length && i - pArr[i] > -1) {
+            while (i + curArr[i] < charArr.length && i - curArr[i] > -1) {
                 //扩充之后的左右两个值相等，回文半径+1
                 //利用之前求出的半径加速判断
-                if (charArr[i + pArr[i]] == charArr[i - pArr[i]]){
-                    pArr[i]++;
+                if (charArr[i + curArr[i]] == charArr[i - curArr[i]]){
+                    curArr[i]++;
                 }
                 else {
                     break;
                 }
             }
             //统计回文半径
-            if (i + pArr[i] > R) {
-                R = i + pArr[i];
+            if (i + curArr[i] > R) {
+                R = i + curArr[i];
                 C = i;
             }
-            max = Math.max(max, pArr[i]);
+            max = Math.max(max, curArr[i]);
         }
         return max - 1;
     }
