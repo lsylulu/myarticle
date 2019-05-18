@@ -55,7 +55,7 @@ public class ProviderAndConsumer<T> {
     }
 
     public static void main(String[] args) {
-        ProviderAndConsumer<String> myContainer2 = new ProviderAndConsumer<String>();
+        ProviderAndConsumer<String> container = new ProviderAndConsumer<String>();
 
         // 启消费者线程
         for (int i = 0; i < 10; i++) {
@@ -66,7 +66,7 @@ public class ProviderAndConsumer<T> {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    System.out.println("消费者--"+myContainer2.get());
+                    System.out.println("消费者--"+container.get());
                 }
             }, "consumer_" + i).start();
         }
@@ -80,7 +80,7 @@ public class ProviderAndConsumer<T> {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    myContainer2.put(Thread.currentThread().getName() + "" + j);
+                    container.put(Thread.currentThread().getName() + "" + j);
                 }
             }, "产品-" + i).start();
         }
