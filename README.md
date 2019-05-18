@@ -6,3 +6,5 @@
 Java枚举类，你真的了解吗？-enums
 
 什么是马拉车算法？-manacher
+
+ReentrantLock源码详细解读-provider-consumer
