@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 /**
+ * 代码来源：尚学堂
  * 服务器实现模式为一个请求一个通道，即客户端发送的连接请求都会注册
  * 到多路复用器上，多路复用器轮询到连接有 I/O 请求时才启动一个线程进行处理。
  */

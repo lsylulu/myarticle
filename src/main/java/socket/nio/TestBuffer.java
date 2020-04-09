@@ -2,6 +2,9 @@ package socket.nio;
 
 import java.nio.ByteBuffer;
 
+/**
+ * 代码来源：尚学堂
+ */
 public class TestBuffer {
     public static void main(String[] args) {
         ByteBuffer buffer= ByteBuffer.allocate(16);

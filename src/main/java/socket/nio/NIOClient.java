@@ -6,6 +6,9 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.util.Scanner;
 
+/**
+ * 代码来源：尚学堂
+ */
 public class NIOClient {
 
     public static void main(String[] args) {

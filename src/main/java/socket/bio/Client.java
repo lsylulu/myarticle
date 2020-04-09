@@ -7,6 +7,9 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
 
+/**
+ *  * 代码来源：尚学堂
+ */
 public class Client {
     public static void main(String[] args) {
         String host=null;
